@@ -1,0 +1,60 @@
+.masonryGrid {
+  display: flex;
+  margin-left: calc(-1 * var(--static-space-16));
+  width: 100%;
+}
+
+.masonryGridColumn {
+  padding-left: var(--static-space-16);
+  background-clip: padding-box;
+}
+
+.gridItem {
+  position: relative; /* Necesario para posicionar el botón dentro del contenedor */
+  margin-bottom: var(--static-space-16);
+  width: calc(
+    100% - var(--static-space-16)
+  ); /* Ocupar un tercio del ancho de la columna */
+  height: 400px; /* Altura fija */
+  overflow: hidden; /* Ocultar partes de la imagen que se salgan */
+}
+
+.gridItem img {
+  width: 100%; /* La imagen ocupará el 100% del contenedor */
+  height: 100%; /* La imagen también tendrá una altura de 100% */
+  object-fit: cover; /* Mantiene la proporción sin distorsionar */
+  transition: filter 0.3s ease; /* Transición para el efecto de difuminado */
+}
+
+.gridItem:hover img {
+  filter: blur(2px); /* Efecto de difuminado al pasar el cursor */
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrando el botón */
+  padding: 10px 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo blanco con transparencia */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0; /* Ocultar el botón inicialmente */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1; /* Asegurarse de que esté sobre la imagen */
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Aumentar tamaño del botón al hacer hover */
+    background-color: rgba(255, 255, 255, 1); /* Más opaco al hover */
+  }
+}
+
+.gridItem:hover .button {
+  opacity: 1; /* Mostrar el botón al pasar el cursor sobre la imagen */
+}

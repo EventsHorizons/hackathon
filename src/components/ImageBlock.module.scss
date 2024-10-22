@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+
+.imageBlock {
+    position: relative;
+    width: 100%; 
+    max-width: 320px;
+    height: auto;
+    
+  }
+  
+  .image {
+    width: 100%; 
+    height: auto; 
+    
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegurar que el overlay cubra completamente el contenedor */
+    height: 100%; /* Asegurar que cubra toda la imagen */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .imageBlock:hover .overlay {
+    opacity: 1;
+  }
+  
+  .button {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #4b0082;
+  }
+  
+  .text-description1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    max-width: 90%;
+    text-align: center;
+  }
+
+.description {
+  font-family: 'Pirata One', serif;
+  font-size: 32px; 
+  color: white; 
+  margin-top: 8px;
+  align-items: center; 
+}
+
+.title {
+    font-family: 'Pirata One', serif;
+    font-size: 24px; 
+    color: white; 
+    margin-top: 8px;
+    align-items: center; 
+}
+
+.button {
+  background-color: #6a0dad;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 15px; 
+  font-family: 'Pirata One', serif; 
+}
+
+.button:hover {
+  background-color: #4b0082;
+}
+
+.text-description-a{
+  font-size: 35px; 
+  font-weight: 900;
+  margin-bottom: 0px;
+  text-align: justify;
+}
+
+
+.share-button {
+  font-family: 'Pirata One', serif;
+  background-color: #6a0dad; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 6px 12px; /* Tamaño del botón */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 4px; /* Esquinas redondeadas */
+  text-align: center; /* Centra el texto dentro del botón */
+  display: inline-block; /* Asegura que el botón se comporte como un bloque */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+.share-button:hover {
+  background-color: #4b0082; /* Color al pasar el ratón */
+}
